@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div id="text-container">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const textContainer = document.getElementById('text-container');
+      const storageKey = 'userInputText';
+      const typingSpeed = 80;
+      const lineDelay = 1000;
+      const defaultText = "radio 收音机；无线电,radial 放射状的,radiant 发光的,radiation 辐射,radiology 放射学";
+
+      async function typeWriter(element, text, callback) {
+        let i = 0;
+        element.textContent = ''; // 清空内容开始打字
+        function type() {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, typingSpeed);
+          } else if (callback) {
+            callback();
+          }
+        }
+        type();
+      }
+
+      async function displayTextsWithAnimation(textToDisplay) {
+        if (!textToDisplay) return;
+        const textsArray = textToDisplay.split(',');
+        textContainer.innerHTML = ''; // 清空之前的内容
+        let isFirstAnimatedLine = true; // 用于标记是否是整个动画序列的第一行
+
+        for (const item of textsArray) {
+          const trimmedItem = item.trim();
+          if (trimmedItem !== '') {
+            if (isFirstAnimatedLine) {
+              // 在首行动画（typeWriter调用）开始前，增加一个短暂的延迟
+              // 这给 puppeteer 一个缓冲时间，以确保它准备好捕捉第一个字符
+              await new Promise(r => setTimeout(r, 600)); // 600ms 延迟
+              isFirstAnimatedLine = false;
+            }
+            const p = document.createElement('p');
+            textContainer.appendChild(p);
+            await new Promise(resolve => {
+              typeWriter(p, trimmedItem, resolve);
+            });
+            await new Promise(resolve => setTimeout(resolve, lineDelay));
+          }
+        }
+        // 所有动画完成后，设置一个标记
+        document.body.setAttribute('data-animation-complete', 'true');
+      }
+
+      function promptForInputAndDisplay() {
+        // 延迟弹窗，确保页面渲染完成
+        setTimeout(() => {
+          const userInput = prompt('请输入文字，用英文逗号分隔：');
+          if (userInput !== null) { // 用户点击了“确定”
+            if (userInput.trim() === '') {
+              alert('您没有输入任何内容。');
+              textContainer.innerHTML = '<p>您没有输入任何内容。</p>';
+              // 可选: localStorage.removeItem(storageKey); 
+            } else {
+              localStorage.setItem(storageKey, userInput);
+              displayTextsWithAnimation(userInput);
+            }
+          } else {
+            textContainer.innerHTML = '<p>您取消了输入。</p>';
+          }
+        }, 100); // 延迟100毫秒
+      }
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const textParam = urlParams.get('text');
+
+      if (textParam === '0') {
+        localStorage.removeItem(storageKey);
+        promptForInputAndDisplay();
+      } else if (textParam === '1' || textParam === null) { // text=1 或没有参数
+        let textToDisplay = localStorage.getItem(storageKey);
+        if (!textToDisplay) {
+          textToDisplay = defaultText;
+          // 可选: 如果希望默认值也保存到缓存，可以在这里setItem
+          // localStorage.setItem(storageKey, defaultText);
+        }
+        displayTextsWithAnimation(textToDisplay);
+      } else {
+        // 其他参数值，可以按text=1处理或给出提示
+        let textToDisplay = localStorage.getItem(storageKey);
+        if (!textToDisplay) {
+          textToDisplay = defaultText;
+        }
+        displayTextsWithAnimation(textToDisplay);
+      }
+    });
+  </script>
+</body>
+
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  #text-container {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #text-container p {
+    margin: 70px 0;
+    word-break: break-all;
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    text-shadow:
+      -4px -4px 0 black,
+      4px -4px 0 black,
+      -4px 4px 0 black,
+      4px 4px 0 black,
+      0px 4px 0 black,
+      0px -4px 0 black,
+      4px 0px 0 black,
+      -4px 0px 0 black;
+    /* 4px黑色描边 */
+  }
+</style>

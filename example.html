@@ -44,7 +44,7 @@
             if (isFirstAnimatedLine) {
               // 在首行动画（typeWriter调用）开始前，增加一个短暂的延迟
               // 这给 puppeteer 一个缓冲时间，以确保它准备好捕捉第一个字符
-              await new Promise(r => setTimeout(r, 600)); // 600ms 延迟
+              await new Promise(r => setTimeout(r, 1000)); // 1s 延迟
               isFirstAnimatedLine = false;
             }
             const p = document.createElement('p');

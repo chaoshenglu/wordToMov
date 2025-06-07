@@ -1,3 +1,8 @@
+// Node.js环境下导入fetch
+if (typeof fetch === 'undefined') {
+    global.fetch = require('node-fetch');
+}
+
 /**
  * Google Cloud Text-to-Speech API 核心封装
  */
@@ -87,9 +92,17 @@ class GoogleTTS {
     /**
      * 将base64音频数据转换为Blob URL
      * @param {string} base64Audio - base64编码的音频数据
-     * @returns {string} - Blob URL
+     * @returns {string} - Blob URL或Buffer（Node.js环境）
      */
     base64ToAudioUrl(base64Audio) {
+        // Node.js环境
+        if (typeof window === 'undefined') {
+            const audioBuffer = Buffer.from(base64Audio, 'base64');
+            // 创建一个临时的data URL
+            return `data:audio/mp3;base64,${base64Audio}`;
+        }
+        
+        // 浏览器环境
         const audioBytes = atob(base64Audio);
         const audioArray = new Uint8Array(audioBytes.length);
         

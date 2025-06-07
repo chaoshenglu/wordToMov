@@ -23,6 +23,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^24.8.2"
+    "puppeteer": "^24.8.2",
+    "node-fetch": "^2.6.7"
   }
 }

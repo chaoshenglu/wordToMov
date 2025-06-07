@@ -17,13 +17,13 @@
     "export:mov4": "ffmpeg -framerate 20 -i frames/frame_%04d.png -i audio/audio4.mp3 -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac -shortest output4.mov -y",
     "export:png5": "node capture5.js",
     "export:mov5": "ffmpeg -framerate 20 -i frames/frame_%04d.png -i audio/audio5.mp3 -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac -shortest output5.mov -y",
-    "combine":""
+    "combine": ""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^24.8.2",
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.8.2"
   }
 }

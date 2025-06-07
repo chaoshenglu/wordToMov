@@ -1,6 +1,10 @@
-// Node.js环境下导入fetch
+// Node.js环境下动态导入fetch
+let fetchModule = null;
 if (typeof fetch === 'undefined') {
-    global.fetch = require('node-fetch');
+    fetchModule = import('node-fetch').then(module => {
+        global.fetch = module.default;
+        return module.default;
+    });
 }
 
 /**
@@ -40,6 +44,11 @@ class GoogleTTS {
         };
 
         try {
+            // 确保fetch已加载
+            if (fetchModule) {
+                await fetchModule;
+            }
+            
             const response = await fetch(`${this.baseUrl}?key=${this.apiKey}`, {
                 method: 'POST',
                 headers: {
@@ -151,3 +160,6 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof window !== 'undefined') {
     window.GoogleTTS = GoogleTTS;
 }
+
+// ES模块导出
+export default GoogleTTS;

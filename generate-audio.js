@@ -1,7 +1,12 @@
-const fs = require('fs');
-const path = require('path');
-const fetch = require('node-fetch');
-const GoogleTTS = require('./tts-core-js.js');
+import fs from 'fs';
+import path from 'path';
+import fetch from 'node-fetch';
+import { fileURLToPath } from 'url';
+import GoogleTTS from './tts-core-js.js';
+
+// 获取当前文件的目录路径（ES模块中的__dirname替代方案）
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let en_list = [
     "She wore a thermal sweater to stay warm in the freezing weather.",
@@ -51,7 +56,8 @@ async function generateAudioFiles() {
             } else {
                 // 如果是其他格式的URL，通过fetch获取
                 const response = await fetch(audioUrl);
-                audioBuffer = await response.buffer();
+                const arrayBuffer = await response.arrayBuffer();
+                audioBuffer = Buffer.from(arrayBuffer);
             }
             
             // 保存音频文件

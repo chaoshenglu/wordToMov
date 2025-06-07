@@ -6,6 +6,7 @@ node_modules/
 *.log
 *.sqlite
 output.mov
+output2.mov
 frames/
 # Editor directories and files
 .vscode/

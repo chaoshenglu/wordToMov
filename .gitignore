@@ -8,6 +8,8 @@ node_modules/
 output.mov
 output2.mov
 combined_audio.mp3
+audio/
+__pycache__/
 frames/
 # Editor directories and files
 .vscode/

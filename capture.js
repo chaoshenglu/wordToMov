@@ -10,17 +10,6 @@ const path = require('path'); // path模块用于处理文件路径
   const page = await browser.newPage();
   await page.setViewport({ width: 1080, height: 1920 });
 
-  // 确保 example.html 使用的是默认文本或缓存文本，避免弹窗交互
-  // 如果需要录制特定文本，可以在这里修改 URL，例如 ?text=1&initialText=your,custom,text
-  // 或者直接修改 example.html 中的 defaultText
-  // 为了简单起见，这里我们假设 example.html 会自动加载一些文本进行动画
-  // 如果 example.html 默认会弹窗，录制脚本需要处理这个弹窗，或者修改 example.html 避免在录制时弹窗
-  // 当前 example.html 在 textParam 为 '1' 或 null 时，会尝试读缓存或用默认值，不会弹窗。
-  // 如果 textParam 为 '0'，会弹窗，这会中断录制。
-  // 因此，确保录制时 URL 不带 text=0 参数，或者修改 example.html 在特定条件下不弹窗。
-  // 为了确保录制时使用默认文本且不依赖缓存，可以传递一个特定参数给 example.html
-  // 或者，更简单的方式是，确保 example.html 在没有参数时，使用默认文本。
-  // 当前逻辑是：无参数时，读缓存，若无缓存，用 defaultText。这是适合录制的。
   await page.goto(`file://${path.join(__dirname, 'example.html')}`, {
     waitUntil: 'networkidle0' // 等待网络空闲，确保页面初始脚本执行完毕
   });

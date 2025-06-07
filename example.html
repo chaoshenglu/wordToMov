@@ -12,10 +12,9 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const textContainer = document.getElementById('text-container');
-      const storageKey = 'userInputText';
       const typingSpeed = 80;
       const lineDelay = 500;
-      const defaultText = "thermal 保暖的,thermos 热水瓶,endothermic 吸热的,exothermic 放热的,thermometer 温度计";
+      const text = "thermal 保暖的,thermos 热水瓶,endothermic 吸热的,exothermic 放热的,thermometer 温度计";
 
       async function typeWriter(element, text, callback) {
         let i = 0;
@@ -59,47 +58,7 @@
         document.body.setAttribute('data-animation-complete', 'true');
       }
 
-      function promptForInputAndDisplay() {
-        // 延迟弹窗，确保页面渲染完成
-        setTimeout(() => {
-          const userInput = prompt('请输入文字，用英文逗号分隔：');
-          if (userInput !== null) { // 用户点击了“确定”
-            if (userInput.trim() === '') {
-              alert('您没有输入任何内容。');
-              textContainer.innerHTML = '<p>您没有输入任何内容。</p>';
-              // 可选: localStorage.removeItem(storageKey); 
-            } else {
-              localStorage.setItem(storageKey, userInput);
-              displayTextsWithAnimation(userInput);
-            }
-          } else {
-            textContainer.innerHTML = '<p>您取消了输入。</p>';
-          }
-        }, 100); // 延迟100毫秒
-      }
-
-      const urlParams = new URLSearchParams(window.location.search);
-      const textParam = urlParams.get('text');
-
-      if (textParam === '0') {
-        localStorage.removeItem(storageKey);
-        promptForInputAndDisplay();
-      } else if (textParam === '1' || textParam === null) { // text=1 或没有参数
-        let textToDisplay = localStorage.getItem(storageKey);
-        if (!textToDisplay) {
-          textToDisplay = defaultText;
-          // 可选: 如果希望默认值也保存到缓存，可以在这里setItem
-          // localStorage.setItem(storageKey, defaultText);
-        }
-        displayTextsWithAnimation(textToDisplay);
-      } else {
-        // 其他参数值，可以按text=1处理或给出提示
-        let textToDisplay = localStorage.getItem(storageKey);
-        if (!textToDisplay) {
-          textToDisplay = defaultText;
-        }
-        displayTextsWithAnimation(textToDisplay);
-      }
+      displayTextsWithAnimation(text);
     });
   </script>
 </body>

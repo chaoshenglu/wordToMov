@@ -4,7 +4,7 @@
   "description": "",
   "main": "capture.js",
   "scripts": {
-    "generate:audio": "",
+    "generate:audio": "node generate-audio.js",
     "export:png": "node capture.js",
     "export:mov": "ffmpeg -framerate 20 -i frames/frame_%04d.png -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 output.mov -y && rm -rf frames/*",
     "export:png1": "node capture1.js",

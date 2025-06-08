@@ -7,11 +7,7 @@
 
 <body>
   <div id="text-container">
-    <p id="line1">She wore a thermal sweater to stay warm in the freezing weather.</p>
-    <p id="line2">He filled his thermos with hot coffee before going hiking.</p>
-    <p id="line3">Ice melting is an endothermic process because it absorbs heat from the surroundings.</p>
-    <p id="line4">Burning wood is an exothermic reaction because it releases heat.</p>
-    <p id="line5">The doctor used a thermometer to check if the child had a fever.</p>
+    <!-- 内容将通过JavaScript动态生成 -->
   </div>
 
   <script>
@@ -67,7 +63,21 @@
       }, duration + 500); // 额外500ms确保动画完全结束
     }
 
+    // 动态生成文本内容
+    function generateTextContent() {
+      const textContainer = document.getElementById('text-container');
+      en_list.forEach((text, index) => {
+        const p = document.createElement('p');
+        p.id = `line${index + 1}`;
+        p.textContent = text;
+        textContainer.appendChild(p);
+      });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
+      // 首先生成文本内容
+      generateTextContent();
+      
       const lineIndex = getLineIndex();
       const duration = getAnimationDuration();
       

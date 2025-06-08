@@ -19,6 +19,14 @@
       "The doctor used a thermometer to check if the child had a fever."
     ];
 
+    let zh_list = [
+      "她穿了一件保暖毛衣，以在严寒天气中保持温暖。",
+      "他去徒步前在保温瓶里装满了热咖啡。",
+      "冰的融化是一个吸热过程，因为它从周围环境中吸收热量。",
+      "燃烧木材是一种放热反应，因为它会释放热量。",
+      "医生用温度计测量孩子是否发烧。"
+    ];
+
     // 从URL参数获取要播放的行索引
     function getLineIndex() {
       const urlParams = new URLSearchParams(window.location.search);
@@ -77,10 +85,10 @@
     document.addEventListener('DOMContentLoaded', function () {
       // 首先生成文本内容
       generateTextContent();
-      
+
       const lineIndex = getLineIndex();
       const duration = getAnimationDuration();
-      
+
       // 延迟1秒开始动画，给puppeteer准备时间
       setTimeout(() => {
         startKaraokeAnimation(lineIndex, duration);
@@ -109,7 +117,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    color:white;
+    color: white;
   }
 
   #text-container p {
@@ -121,12 +129,13 @@
   }
 
   .word {
-    color:white;
+    color: white;
     transition: all 0.3s ease;
   }
 
   .word.highlighted {
-    color: #FFD700; /* 黄色 */
+    color: #FFD700;
+    /* 黄色 */
     transform: scale(1.05);
   }
 </style>

@@ -16,7 +16,7 @@
     "export:mov3": "ffmpeg -framerate 20 -i frames/frame_%04d.png -i audio/audio3.mp3 -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac -shortest output3.mov -y",
     "export:png4": "node capture2.js --index 4",
     "export:mov4": "ffmpeg -framerate 20 -i frames/frame_%04d.png -i audio/audio4.mp3 -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac -shortest output4.mov -y",
-    "export:png5": "node capture5.js --index 5",
+    "export:png5": "node capture2.js --index 5",
     "export:mov5": "ffmpeg -framerate 20 -i frames/frame_%04d.png -i audio/audio5.mp3 -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac -shortest output5.mov -y",
     "combine": ""
   },

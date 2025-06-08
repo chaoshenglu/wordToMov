@@ -75,10 +75,24 @@
     function generateTextContent() {
       const textContainer = document.getElementById('text-container');
       en_list.forEach((text, index) => {
+        // 创建容器div
+        const lineContainer = document.createElement('div');
+        lineContainer.classList.add('line-container');
+        
+        // 创建英文段落
         const p = document.createElement('p');
         p.id = `line${index + 1}`;
         p.textContent = text;
-        textContainer.appendChild(p);
+        p.classList.add('english-text');
+        
+        // 创建中文段落
+        const chineseP = document.createElement('p');
+        chineseP.textContent = zh_list[index];
+        chineseP.classList.add('chinese-text');
+        
+        lineContainer.appendChild(p);
+        lineContainer.appendChild(chineseP);
+        textContainer.appendChild(lineContainer);
       });
     }
 
@@ -120,12 +134,25 @@
     color: white;
   }
 
-  #text-container p {
-    margin: 60px 0;
+  .line-container {
+    margin: 40px 0;
     text-align: center;
+  }
+
+  .english-text {
+    margin: 0 0 15px 0;
     font-size: 40px;
     line-height: 1.2;
     word-wrap: break-word;
+  }
+
+  .chinese-text {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.2;
+    word-wrap: break-word;
+    color: white !important;
+    opacity: 0.8;
   }
 
   .word {

@@ -21,7 +21,7 @@
     "export:all-png": "npm run export:png1 && npm run export:png2 && npm run export:png3 && npm run export:png4 && npm run export:png5",
     "export:all-mov": "npm run export:mov1 && npm run export:mov2 && npm run export:mov3 && npm run export:mov4 && npm run export:mov5",
     "build:all": "npm run export:all-png && npm run export:all-mov && npm run combine",
-    "clean": "rm -rf frames1 frames2 frames3 frames4 frames5 output1.mov output2.mov output3.mov output4.mov output5.mov final_output.mov"
+    "clean": "rm -rf audio frames1 frames2 frames3 frames4 frames5 output1.mov output2.mov output3.mov output4.mov output5.mov final_output.mov"
   },
   "keywords": [],
   "author": "",

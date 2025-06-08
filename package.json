@@ -5,8 +5,8 @@
   "main": "capture.js",
   "scripts": {
     "generate:audio": "node generate-audio.js",
-    "export:png": "node capture.js",
-    "export:mov": "ffmpeg -framerate 20 -i frames/frame_%04d.png -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 output.mov -y && rm -rf frames/*",
+    "a": "node capture.js",
+    "b": "ffmpeg -framerate 20 -i frames/frame_%04d.png -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 output.mov -y && rm -rf frames/*",
     "export:png1": "node capture2.js --index 1",
     "export:mov1": "ffmpeg -framerate 20 -i frames1/frame_%04d.png -i audio/audio1.mp3 -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac output1.mov -y",
     "export:png2": "node capture2.js --index 2",

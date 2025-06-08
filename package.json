@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "capture.js",
-  "type": "module",
   "scripts": {
     "generate:audio": "node generate-audio.js",
     "export:png": "node capture.js",

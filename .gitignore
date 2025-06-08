@@ -6,11 +6,20 @@ node_modules/
 *.log
 *.sqlite
 output.mov
+output1.mov
 output2.mov
+output3.mov
+output4.mov
+output5.mov
 combined_audio.mp3
 audio/
 __pycache__/
 frames/
+frames1/
+frames2/
+frames3/
+frames4/
+frames5/
 # Editor directories and files
 .vscode/
 .idea/

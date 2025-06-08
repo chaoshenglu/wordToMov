@@ -17,7 +17,11 @@
     "export:mov4": "ffmpeg -framerate 20 -i frames4/frame_%04d.png -i audio/audio4.mp3 -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac output4.mov -y",
     "export:png5": "node capture2.js --index 5",
     "export:mov5": "ffmpeg -framerate 20 -i frames5/frame_%04d.png -i audio/audio5.mp3 -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac output5.mov -y",
-    "combine": "ffmpeg -i output1.mov -i output2.mov -i output3.mov -i output4.mov -i output5.mov -filter_complex '[0:v][0:a][1:v][1:a][2:v][2:a][3:v][3:a][4:v][4:a]concat=n=5:v=1:a=1[outv][outa]' -map '[outv]' -map '[outa]' -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac final_output.mov -y"
+    "combine": "ffmpeg -i output1.mov -i output2.mov -i output3.mov -i output4.mov -i output5.mov -filter_complex '[0:v][0:a][1:v][1:a][2:v][2:a][3:v][3:a][4:v][4:a]concat=n=5:v=1:a=1[outv][outa]' -map '[outv]' -map '[outa]' -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac final_output.mov -y",
+    "export:all-png": "npm run export:png1 && npm run export:png2 && npm run export:png3 && npm run export:png4 && npm run export:png5",
+    "export:all-mov": "npm run export:mov1 && npm run export:mov2 && npm run export:mov3 && npm run export:mov4 && npm run export:mov5",
+    "build:all": "npm run export:all-png && npm run export:all-mov && npm run combine",
+    "clean": "rm -rf frames1 frames2 frames3 frames4 frames5 output1.mov output2.mov output3.mov output4.mov output5.mov final_output.mov"
   },
   "keywords": [],
   "author": "",

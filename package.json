@@ -18,7 +18,7 @@
     "export:mov4": "ffmpeg -framerate 20 -i frames4/frame_%04d.png -i audio/audio4.mp3 -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac -shortest output4.mov -y",
     "export:png5": "node capture2.js --index 5",
     "export:mov5": "ffmpeg -framerate 20 -i frames5/frame_%04d.png -i audio/audio5.mp3 -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac -shortest output5.mov -y",
-    "combine": ""
+    "combine": "ffmpeg -i output1.mov -i output2.mov -i output3.mov -i output4.mov -i output5.mov -filter_complex '[0:v][0:a][1:v][1:a][2:v][2:a][3:v][3:a][4:v][4:a]concat=n=5:v=1:a=1[outv][outa]' -map '[outv]' -map '[outa]' -c:v prores_ks -pix_fmt yuva444p10le -profile:v 4 -c:a aac final_output.mov -y"
   },
   "keywords": [],
   "author": "",

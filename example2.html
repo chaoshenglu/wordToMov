@@ -5,4 +5,135 @@
   <meta charset="UTF-8">
 </head>
 
+<body>
+  <div id="text-container">
+    <p id="line1">She wore a thermal sweater to stay warm in the freezing weather.</p>
+    <p id="line2">He filled his thermos with hot coffee before going hiking.</p>
+    <p id="line3">Ice melting is an endothermic process because it absorbs heat from the surroundings.</p>
+    <p id="line4">Burning wood is an exothermic reaction because it releases heat.</p>
+    <p id="line5">The doctor used a thermometer to check if the child had a fever.</p>
+  </div>
+
+  <script>
+    let en_list = [
+      "She wore a thermal sweater to stay warm in the freezing weather.",
+      "He filled his thermos with hot coffee before going hiking.",
+      "Ice melting is an endothermic process because it absorbs heat from the surroundings.",
+      "Burning wood is an exothermic reaction because it releases heat.",
+      "The doctor used a thermometer to check if the child had a fever."
+    ];
+
+    // 从URL参数获取要播放的行索引
+    function getLineIndex() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return parseInt(urlParams.get('index')) || 1;
+    }
+
+    // 从URL参数获取动画时长（毫秒）
+    function getAnimationDuration() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return parseInt(urlParams.get('duration')) || 3000; // 默认3秒
+    }
+
+    function startKaraokeAnimation(lineIndex, duration) {
+      const lineElement = document.getElementById(`line${lineIndex}`);
+      if (!lineElement) return;
+
+      const text = en_list[lineIndex - 1];
+      const words = text.split(' ');
+      const wordDuration = duration / words.length; // 每个单词的动画时长
+
+      lineElement.innerHTML = ''; // 清空内容
+
+      // 创建每个单词的span元素
+      words.forEach((word, index) => {
+        const span = document.createElement('span');
+        span.textContent = word + (index < words.length - 1 ? ' ' : '');
+        span.classList.add('word');
+        lineElement.appendChild(span);
+      });
+
+      // 开始动画
+      const wordSpans = lineElement.querySelectorAll('.word');
+      wordSpans.forEach((span, index) => {
+        setTimeout(() => {
+          span.classList.add('highlighted');
+        }, index * wordDuration);
+      });
+
+      // 动画完成后设置标记
+      setTimeout(() => {
+        document.body.setAttribute('data-animation-complete', 'true');
+      }, duration + 500); // 额外500ms确保动画完全结束
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const lineIndex = getLineIndex();
+      const duration = getAnimationDuration();
+      
+      // 延迟1秒开始动画，给puppeteer准备时间
+      setTimeout(() => {
+        startKaraokeAnimation(lineIndex, duration);
+      }, 1000);
+    });
+  </script>
+</body>
+
 </html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  #text-container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  #text-container p {
+    margin: 60px 0;
+    text-align: center;
+    font-size: 60px;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+
+  .word {
+    color: #F5F5DC; /* 淡黄色 */
+    text-shadow:
+      -3px -3px 0 #FFD700,
+      3px -3px 0 #FFD700,
+      -3px 3px 0 #FFD700,
+      3px 3px 0 #FFD700,
+      0px 3px 0 #FFD700,
+      0px -3px 0 #FFD700,
+      3px 0px 0 #FFD700,
+      -3px 0px 0 #FFD700;
+    transition: all 0.3s ease;
+  }
+
+  .word.highlighted {
+    color: #FFD700; /* 黄色 */
+    text-shadow:
+      -3px -3px 0 #FFA500,
+      3px -3px 0 #FFA500,
+      -3px 3px 0 #FFA500,
+      3px 3px 0 #FFA500,
+      0px 3px 0 #FFA500,
+      0px -3px 0 #FFA500,
+      3px 0px 0 #FFA500,
+      -3px 0px 0 #FFA500;
+    transform: scale(1.05);
+  }
+</style>

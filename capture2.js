@@ -65,9 +65,12 @@ function getIndexFromArgs() {
   if (!fs.existsSync(framesDir)) fs.mkdirSync(framesDir);
 
   let frameCount = 0;
-  const frameDelay = 50; // 20fps
+  const frameDelay = 50; // 20fps (1000ms / 20fps = 50ms per frame)
+  const totalFramesNeeded = Math.ceil(audioDuration * 20); // 计算需要的总帧数
   const maxRecordTime = animationDurationMs + 2000; // 动画时长 + 2秒缓冲
   let elapsedTime = 0;
+  
+  console.log(`需要录制总帧数: ${totalFramesNeeded} 帧 (${audioDuration}秒 × 20fps)`);
 
   console.log('等待动画开始...');
 
@@ -93,7 +96,7 @@ function getIndexFromArgs() {
   }
 
   console.log('开始主循环逐帧捕获...');
-  while (elapsedTime < maxRecordTime) {
+  while (frameCount < totalFramesNeeded && elapsedTime < maxRecordTime) {
     await new Promise(r => setTimeout(r, frameDelay));
     elapsedTime += frameDelay;
 
@@ -106,34 +109,22 @@ function getIndexFromArgs() {
     await page.screenshot({ path: filename, omitBackground: true });
     frameCount++;
 
-    // 检查动画是否完成
-    const animationComplete = await page.evaluate(() => {
-      return document.body.getAttribute('data-animation-complete') === 'true';
-    });
-
-    if (animationComplete) {
-      console.log('检测到动画完成信号。');
-      // 动画完成后，再多录制几帧确保捕捉到最终状态
-      console.log('额外录制最后几帧...');
-      for (let i = 0; i < 10; i++) {
-        await new Promise(r => setTimeout(r, frameDelay));
-        elapsedTime += frameDelay;
-        if (elapsedTime >= maxRecordTime && i > 0) {
-          console.log('在额外录制期间达到最大时长。');
-          break;
-        }
-        const finalFilename = path.join(framesDir, `frame_${String(frameCount).padStart(4, '0')}.png`);
-        await page.screenshot({ path: finalFilename, omitBackground: true });
-        frameCount++;
-      }
-      break;
-    }
-
     // 每5秒打印一次进度
     if (elapsedTime % 5000 < frameDelay && elapsedTime > 0) {
       if ((elapsedTime / frameDelay) % (Math.floor(5000 / frameDelay)) === 0) {
-        console.log(`已录制 ${Math.round(elapsedTime / 1000)} 秒, ${frameCount} 帧...`);
+        console.log(`已录制 ${Math.round(elapsedTime / 1000)} 秒, ${frameCount}/${totalFramesNeeded} 帧...`);
       }
+    }
+  }
+  
+  // 如果还没录制够帧数，继续录制到足够的帧数
+  if (frameCount < totalFramesNeeded) {
+    console.log(`继续录制剩余帧数: ${totalFramesNeeded - frameCount} 帧`);
+    while (frameCount < totalFramesNeeded) {
+      await new Promise(r => setTimeout(r, frameDelay));
+      const filename = path.join(framesDir, `frame_${String(frameCount).padStart(4, '0')}.png`);
+      await page.screenshot({ path: filename, omitBackground: true });
+      frameCount++;
     }
   }
 

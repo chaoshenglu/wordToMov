@@ -109,41 +109,24 @@
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    color: #F5F5DC; /* 淡黄色 */
   }
 
   #text-container p {
     margin: 60px 0;
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
     line-height: 1.2;
     word-wrap: break-word;
   }
 
   .word {
     color: #F5F5DC; /* 淡黄色 */
-    text-shadow:
-      -3px -3px 0 #FFD700,
-      3px -3px 0 #FFD700,
-      -3px 3px 0 #FFD700,
-      3px 3px 0 #FFD700,
-      0px 3px 0 #FFD700,
-      0px -3px 0 #FFD700,
-      3px 0px 0 #FFD700,
-      -3px 0px 0 #FFD700;
     transition: all 0.3s ease;
   }
 
   .word.highlighted {
     color: #FFD700; /* 黄色 */
-    text-shadow:
-      -3px -3px 0 #FFA500,
-      3px -3px 0 #FFA500,
-      -3px 3px 0 #FFA500,
-      3px 3px 0 #FFA500,
-      0px 3px 0 #FFA500,
-      0px -3px 0 #FFA500,
-      3px 0px 0 #FFA500,
-      -3px 0px 0 #FFA500;
     transform: scale(1.05);
   }
 </style>

@@ -1,18 +1,46 @@
 import os
 import base64
+import re
 from google_tts import GoogleTTS
 
-# 英文句子列表
-en_list = [
-    "She wore a thermal sweater to stay warm in the freezing weather.",
-    "He filled his thermos with hot coffee before going hiking.",
-    "Ice melting is an endothermic process because it absorbs heat from the surroundings.",
-    "Burning wood is an exothermic reaction because it releases heat.",
-    "The doctor used a thermometer to check if the child had a fever."
-]
+def get_en_list_from_html(html_file_path):
+    """从HTML文件中提取英文句子列表"""
+    try:
+        with open(html_file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # 使用正则表达式匹配en_list数组
+        pattern = r'let\s+en_list\s*=\s*\[(.*?)\];'
+        match = re.search(pattern, content, re.DOTALL)
+        
+        if match:
+            # 提取数组内容
+            array_content = match.group(1)
+            # 使用正则表达式提取所有字符串
+            string_pattern = r'"([^"]*)"|\'([^\']*)\''
+            strings = re.findall(string_pattern, array_content)
+            # 合并双引号和单引号的结果
+            en_list = [s[0] if s[0] else s[1] for s in strings]
+            return en_list
+        else:
+            print('在HTML文件中未找到en_list数组')
+            return []
+    except Exception as e:
+        print(f'读取HTML文件失败: {str(e)}')
+        return []
+
+# 从HTML文件获取英文句子列表
+current_dir = os.path.dirname(os.path.abspath(__file__))
+html_file_path = os.path.join(current_dir, 'example2.html')
+en_list = get_en_list_from_html(html_file_path)
 
 def generate_audio_files():
     """生成音频文件的主函数"""
+    # 检查是否成功获取到英文句子列表
+    if not en_list:
+        print('未能从HTML文件中获取到英文句子列表，程序退出')
+        return
+    
     # 从环境变量获取API Key
     api_key = os.getenv('GOOGLE_TTS_API_KEY')
     

@@ -23,32 +23,31 @@ function getIndexFromArgs() {
   if (indexArg) {
     return parseInt(indexArg.split('=')[1]);
   }
-  
+
   // 检查是否有 --index 后跟数字的格式
   const indexIndex = args.indexOf('--index');
   if (indexIndex !== -1 && args[indexIndex + 1]) {
     return parseInt(args[indexIndex + 1]);
   }
-  
+
   return 1; // 默认第一行
 }
 
 (async () => {
   const lineIndex = getIndexFromArgs();
   console.log(`开始录制第 ${lineIndex} 行文字动画...`);
-  
+
   // 获取对应音频文件的时长
   const audioPath = path.join(__dirname, 'audio', `audio${lineIndex}.mp3`);
   const audioDuration = getAudioDuration(audioPath);
   const animationDurationMs = Math.round(audioDuration * 1000); // 转换为毫秒
-  
+
   console.log(`音频文件: ${audioPath}`);
   console.log(`音频时长: ${audioDuration} 秒`);
   console.log(`动画时长: ${animationDurationMs} 毫秒`);
-  
+
   const browser = await puppeteer.launch({
-    // headless: false, // 取消注释以在调试时查看浏览器窗口
-    // slowMo: 50, // 减慢 Puppeteer 操作，便于观察
+    executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1080, height: 1920 });
@@ -56,7 +55,7 @@ function getIndexFromArgs() {
   // 构建带参数的URL
   const htmlPath = path.join(__dirname, 'example2.html');
   const url = `file://${htmlPath}?index=${lineIndex}&duration=${animationDurationMs}`;
-  
+
   await page.goto(url, {
     waitUntil: 'networkidle0' // 等待网络空闲，确保页面初始脚本执行完毕
   });
@@ -69,7 +68,7 @@ function getIndexFromArgs() {
   const totalFramesNeeded = Math.ceil(audioDuration * 20); // 计算需要的总帧数
   const maxRecordTime = animationDurationMs + 2000; // 动画时长 + 2秒缓冲
   let elapsedTime = 0;
-  
+
   console.log(`需要录制总帧数: ${totalFramesNeeded} 帧 (${audioDuration}秒 × 20fps)`);
 
   console.log('等待动画开始...');
@@ -116,7 +115,7 @@ function getIndexFromArgs() {
       }
     }
   }
-  
+
   // 如果还没录制够帧数，继续录制到足够的帧数
   if (frameCount < totalFramesNeeded) {
     console.log(`继续录制剩余帧数: ${totalFramesNeeded - frameCount} 帧`);

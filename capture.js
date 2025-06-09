@@ -4,8 +4,7 @@ const path = require('path'); // path模块用于处理文件路径
 
 (async () => {
   const browser = await puppeteer.launch({
-    // headless: false, // 取消注释以在调试时查看浏览器窗口
-    // slowMo: 50, // 减慢 Puppeteer 操作，便于观察
+    executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1080, height: 1920 });

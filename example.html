@@ -10,11 +10,24 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', async function () {
       const textContainer = document.getElementById('text-container');
       const typingSpeed = 80;
       const lineDelay = 500;
-      const text = "manual 手工的；体力的,manufacture 生产；制造,manuscript 手稿,manipulate 操纵,manacle 手铐";
+
+      // 从words.json文件加载数据
+      async function loadWordsFromJson() {
+        try {
+          const response = await fetch('./words.json');
+          const data = await response.json();
+          // 将JSON数据转换为原来的字符串格式
+          return data.words.map(item => `${item.word} ${item.meaning}`).join(',');
+        } catch (error) {
+          console.error('Error loading words.json:', error);
+          // 如果加载失败，使用默认数据
+          return "manual 手工的,manufacture 生产,manuscript 手稿,manipulate 操纵,manacle 手铐";
+        }
+      }
 
       async function typeWriter(element, text, callback) {
         let i = 0;
@@ -58,6 +71,8 @@
         document.body.setAttribute('data-animation-complete', 'true');
       }
 
+      // 加载单词数据并开始动画
+      const text = await loadWordsFromJson();
       displayTextsWithAnimation(text);
     });
   </script>

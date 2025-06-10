@@ -24,8 +24,7 @@
           return data.words.map(item => `${item.word} ${item.meaning}`).join(',');
         } catch (error) {
           console.error('Error loading words.json:', error);
-          // 如果加载失败，使用默认数据
-          return "manual 手工的,manufacture 生产,manuscript 手稿,manipulate 操纵,manacle 手铐";
+          return "words.json 解析出错";
         }
       }
 

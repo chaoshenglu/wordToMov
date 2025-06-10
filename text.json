@@ -1,0 +1,29 @@
+{
+    "sentences": [
+      {
+        "word": "manual",
+        "sentence": "He prefers manual work because he enjoys using his hands.",
+        "translation": "他更喜欢体力劳动，因为他喜欢动手工作。"
+      },
+      {
+        "word": "manufacture",
+        "sentence": "This factory manufactures high-quality electronic devices.",
+        "translation": "这家工厂生产高质量的电子设备。"
+      },
+      {
+        "word": "manuscript",
+        "sentence": "The author submitted his manuscript to the publisher for review.",
+        "translation": "作者将他的手稿提交给出版商审阅。"
+      },
+      {
+        "word": "manipulate",
+        "sentence": "Politicians sometimes manipulate public opinion to gain support.",
+        "translation": "政客有时会操纵舆论以获得支持。"
+      },
+      {
+        "word": "manacle",
+        "sentence": "The police used manacles to restrain the suspect.",
+        "translation": "警察用手铐制服了嫌疑人。"
+      }
+    ]
+  }

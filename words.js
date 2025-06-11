@@ -32,4 +32,4 @@ const wordsData = {
       "translation": "囚犯设法通过一条隐蔽的隧道逃走了。"
     }
   ]
-}
+};

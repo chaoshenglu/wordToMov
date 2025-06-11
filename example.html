@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <script src="./words.js"></script>
 </head>
 
 <body>
@@ -15,17 +16,10 @@
       const typingSpeed = 80;
       const lineDelay = 500;
 
-      // 从words.json文件加载数据
-      async function loadWordsFromJson() {
-        try {
-          const response = await fetch('./words.json');
-          const data = await response.json();
-          // 将JSON数据转换为原来的字符串格式
-          return data.words.map(item => `${item.word} ${item.meaning}`).join(',');
-        } catch (error) {
-          console.error('Error loading words.json:', error);
-          return "words.json 解析出错";
-        }
+      // 从words.js获取数据
+      function getWordsFromJs() {
+        // 将数据转换为原来的字符串格式
+        return wordsData.words.map(item => `${item.word} ${item.meaning}`).join(',');
       }
 
       async function typeWriter(element, text, callback) {
@@ -70,8 +64,8 @@
         document.body.setAttribute('data-animation-complete', 'true');
       }
 
-      // 加载单词数据并开始动画
-      const text = await loadWordsFromJson();
+      // 获取单词数据并开始动画
+      const text = getWordsFromJs();
       displayTextsWithAnimation(text);
     });
   </script>

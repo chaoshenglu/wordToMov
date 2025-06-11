@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <script src="./words.js"></script>
 </head>
 
 <body>
@@ -14,29 +15,14 @@
     let en_list = [];
     let zh_list = [];
 
-    // 从words.json加载数据
-    async function loadWordsData() {
-      try {
-        const response = await fetch('./words.json');
-        const data = await response.json();
-        
-        // 提取英文句子和中文翻译
-        en_list = data.words.map(item => item.sentence);
-        zh_list = data.words.map(item => item.translation);
-        
-        // 数据加载完成后初始化页面
-        initializePage();
-      } catch (error) {
-        console.error('加载words.json失败:', error);
-        // 如果加载失败，使用默认数据
-        en_list = [
-          "sentence"
-        ];
-        zh_list = [
-          "中文翻译"
-        ];
-        initializePage();
-      }
+    // 从words.js加载数据
+    function loadWordsData() {
+      // 直接从引入的wordsData变量中提取数据
+      en_list = wordsData.words.map(item => item.sentence);
+      zh_list = wordsData.words.map(item => item.translation);
+      
+      // 数据加载完成后初始化页面
+      initializePage();
     }
 
     // 从URL参数获取要播放的行索引

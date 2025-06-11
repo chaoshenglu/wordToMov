@@ -2,34 +2,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "manual",
-      "meaning": "手工的",
-      "sentence": "He prefers manual work because he enjoys using his hands.",
-      "translation": "他更喜欢体力劳动，因为他喜欢动手工作。"
+      "word": "capture",
+      "meaning": "捕获",
+      "sentence": "The wildlife photographer hopes to capture the rare bird on camera.",
+      "translation": "野生动物摄影师希望用相机捕捉到这种稀有鸟类。"
     },
     {
-      "word": "manufacture",
-      "meaning": "生产",
-      "sentence": "This factory manufactures high-quality electronic devices.",
-      "translation": "这家工厂生产高质量的电子设备。"
+      "word": "captive",
+      "meaning": "被俘虏的",
+      "sentence": "The soldiers were held captive for three months before being rescued.",
+      "translation": "士兵们被囚禁了三个月后才获救。"
     },
     {
-      "word": "manuscript",
-      "meaning": "手稿",
-      "sentence": "The author submitted his manuscript to the publisher for review.",
-      "translation": "作者将他的手稿提交给出版商审阅。"
+      "word": "captivate",
+      "meaning": "迷住",
+      "sentence": "Her brilliant performance captivated the entire audience.",
+      "translation": "她出色的表演迷住了全场观众。"
     },
     {
-      "word": "manipulate",
-      "meaning": "操纵",
-      "sentence": "Politicians sometimes manipulate public opinion to gain support.",
-      "translation": "政客有时会操纵舆论以获得支持。"
+      "word": "capacity",
+      "meaning": "容量",
+      "sentence": "The conference hall has a seating capacity of over 500 people.",
+      "translation": "这个会议厅可容纳超过500人。"
     },
     {
-      "word": "manacle",
-      "meaning": "手铐",
-      "sentence": "The police used manacles to restrain the suspect.",
-      "translation": "警察用手铐制服了嫌疑人。"
+      "word": "escape",
+      "meaning": "逃跑",
+      "sentence": "The prisoner managed to escape through a hidden tunnel.",
+      "translation": "囚犯设法通过一条隐蔽的隧道逃走了。"
     }
   ]
-};
+}

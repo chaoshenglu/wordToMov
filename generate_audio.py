@@ -3,34 +3,51 @@ import base64
 import re
 from google_tts import GoogleTTS
 
-def get_en_list_from_json(json_file_path):
-    """从JSON文件中提取英文句子列表"""
+def get_en_list_from_js(js_file_path):
+    """从JavaScript文件中提取英文句子列表"""
     try:
         import json
-        with open(json_file_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+        import re
         
-        # 从words数组中提取sentence字段
-        if 'words' in data and isinstance(data['words'], list):
-            en_list = [word['sentence'] for word in data['words'] if 'sentence' in word]
-            return en_list
+        # 读取JavaScript文件内容
+        with open(js_file_path, 'r', encoding='utf-8') as f:
+            js_content = f.read()
+        
+        # 使用正则表达式提取JSON部分
+        # 匹配 const wordsData = { ... }; 中的JSON部分
+        pattern = r'const\s+wordsData\s*=\s*({.*?});'
+        match = re.search(pattern, js_content, re.DOTALL)
+        
+        if match:
+            json_str = match.group(1)
+            # 解析JSON
+            data = json.loads(json_str)
+            
+            # 从words数组中提取sentence字段
+            if 'words' in data and isinstance(data['words'], list):
+                en_list = [word['sentence'] for word in data['words'] if 'sentence' in word]
+                return en_list
+            else:
+                print('在JavaScript文件中未找到words数组')
+                return []
         else:
-            print('在JSON文件中未找到words数组')
+            print('无法从JavaScript文件中提取JSON数据')
             return []
+            
     except Exception as e:
-        print(f'读取JSON文件失败: {str(e)}')
+        print(f'读取JavaScript文件失败: {str(e)}')
         return []
 
-# 从JSON文件获取英文句子列表
+# 从JavaScript文件获取英文句子列表
 current_dir = os.path.dirname(os.path.abspath(__file__))
-json_file_path = os.path.join(current_dir, 'words.json')
-en_list = get_en_list_from_json(json_file_path)
+js_file_path = os.path.join(current_dir, 'words.js')
+en_list = get_en_list_from_js(js_file_path)
 
 def generate_audio_files():
     """生成音频文件的主函数"""
     # 检查是否成功获取到英文句子列表
     if not en_list:
-        print('未能从JSON文件中获取到英文句子列表，程序退出')
+        print('未能从JavaScript文件中获取到英文句子列表，程序退出')
         return
     
     # 从环境变量获取API Key

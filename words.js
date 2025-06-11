@@ -9,7 +9,7 @@ const wordsData = {
     },
     {
       "word": "captive",
-      "meaning": "被俘虏的",
+      "meaning": "俘虏",
       "sentence": "The soldiers were held captive for three months before being rescued.",
       "translation": "士兵们被囚禁了三个月后才获救。"
     },

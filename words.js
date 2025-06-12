@@ -2,34 +2,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "capture",
-      "meaning": "捕获",
-      "sentence": "The wildlife photographer hopes to capture the rare bird on camera.",
-      "translation": "野生动物摄影师希望用相机捕捉到这种稀有鸟类。"
+      "word": "reference",
+      "meaning": "参考",
+      "sentence": "Please include a reference to the source in your research paper.",
+      "translation": "请在研究论文中包含对来源的引用。"
     },
     {
-      "word": "captive",
-      "meaning": "俘虏",
-      "sentence": "The soldiers were held captive for three months before being rescued.",
-      "translation": "士兵们被囚禁了三个月后才获救。"
+      "word": "referable",
+      "meaning": "可参考的",
+      "sentence": "The success of the project is referable to the team's hard work.",
+      "translation": "项目的成功可归因于团队的辛勤工作。"
     },
     {
-      "word": "captivate",
-      "meaning": "迷住",
-      "sentence": "Her brilliant performance captivated the entire audience.",
-      "translation": "她出色的表演迷住了全场观众。"
+      "word": "referral",
+      "meaning": "推荐",
+      "sentence": "She got the job through a referral from a friend.",
+      "translation": "她通过朋友的推荐得到了这份工作。"
     },
     {
-      "word": "capacity",
-      "meaning": "容量",
-      "sentence": "The conference hall has a seating capacity of over 500 people.",
-      "translation": "这个会议厅可容纳超过500人。"
+      "word": "referee",
+      "meaning": "裁判",
+      "sentence": "The referee blew the whistle to stop the game.",
+      "translation": "裁判吹哨停止了比赛。"
     },
     {
-      "word": "escape",
-      "meaning": "逃跑",
-      "sentence": "The prisoner managed to escape through a hidden tunnel.",
-      "translation": "囚犯设法通过一条隐蔽的隧道逃走了。"
+      "word": "preference",
+      "meaning": "偏好",
+      "sentence": "He has a preference for tea over coffee.",
+      "translation": "比起咖啡，他更喜欢茶。"
     }
   ]
 };

@@ -27,8 +27,8 @@ const wordsData = {
     {
       "word": "discriminate",
       "meaning": "歧视(不好的判断)",
-      "sentence": "It's important to discriminate between facts and opinions.",
-      "translation": "区分事实和观点很重要。"
+      "sentence": "She felt discriminated against because of her disability.",
+      "translation": "她因为自己的残疾而感到被歧视。"
     }
   ]
 };

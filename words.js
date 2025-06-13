@@ -1,35 +1,34 @@
-// 单词数据
 const wordsData = {
   "words": [
     {
-      "word": "reference",
-      "meaning": "参考",
-      "sentence": "Please include a reference to the source in your research paper.",
-      "translation": "请在研究论文中包含对来源的引用。"
+      "word": "crisis",
+      "meaning": "危机(抉择时刻)",
+      "sentence": "The government is taking measures to deal with the economic crisis.",
+      "translation": "政府正在采取措施应对经济危机。"
     },
     {
-      "word": "referable",
-      "meaning": "可参考的",
-      "sentence": "The success of the project is referable to the team's hard work.",
-      "translation": "项目的成功可归因于团队的辛勤工作。"
+      "word": "critic",
+      "meaning": "批评家(做出判断的人)",
+      "sentence": "The famous critic gave a harsh review of the new movie.",
+      "translation": "那位著名的批评家对这部新电影给出了严厉的评论。"
     },
     {
-      "word": "referral",
-      "meaning": "推荐",
-      "sentence": "She got the job through a referral from a friend.",
-      "translation": "她通过朋友的推荐得到了这份工作。"
+      "word": "criticize",
+      "meaning": "批评(做出判断)",
+      "sentence": "Some people criticize the plan for being too unrealistic.",
+      "translation": "有些人批评这个计划太不切实际。"
     },
     {
-      "word": "referee",
-      "meaning": "裁判",
-      "sentence": "The referee blew the whistle to stop the game.",
-      "translation": "裁判吹哨停止了比赛。"
+      "word": "critical",
+      "meaning": "批判的(判断性的)",
+      "sentence": "She has a critical mind and always questions everything.",
+      "translation": "你她具有批判性思维，总是质疑一切。"
     },
     {
-      "word": "preference",
-      "meaning": "偏好",
-      "sentence": "He has a preference for tea over coffee.",
-      "translation": "比起咖啡，他更喜欢茶。"
+      "word": "discriminate",
+      "meaning": "歧视(不好的判断)",
+      "sentence": "It's important to discriminate between facts and opinions.",
+      "translation": "区分事实和观点很重要。"
     }
   ]
 };

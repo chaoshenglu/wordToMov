@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "crisis",
-      "meaning": "危机(抉择时刻)",
-      "sentence": "The government is taking measures to deal with the economic crisis.",
-      "translation": "政府正在采取措施应对经济危机。"
+      "word": "permissible",
+      "meaning": "可允许的（放开限制）",
+      "sentence": "The use of mobile phones is not permissible during the exam.",
+      "translation": "考试期间不允许使用手机。"
     },
     {
-      "word": "critic",
-      "meaning": "批评家(做出判断的人)",
-      "sentence": "The famous critic gave a harsh review of the new movie.",
-      "translation": "那位著名的批评家对这部新电影给出了严厉的评论。"
+      "word": "admissible",
+      "meaning": "可采纳的（放开约束）",
+      "sentence": "The judge ruled that the new evidence was admissible in court.",
+      "translation": "法官裁定新证据可以在法庭上被采纳。"
     },
     {
-      "word": "criticize",
-      "meaning": "批评(做出判断)",
-      "sentence": "Some people criticize the plan for being too unrealistic.",
-      "translation": "有些人批评这个计划太不切实际。"
+      "word": "dismiss",
+      "meaning": "解散（放开枷锁）",
+      "sentence": "The teacher had to dismiss the class early due to the power outage.",
+      "translation": "由于停电，老师不得不提前下课。"
     },
     {
-      "word": "critical",
-      "meaning": "批判的(判断性的)",
-      "sentence": "She has a critical mind and always questions everything.",
-      "translation": "你她具有批判性思维，总是质疑一切。"
+      "word": "missile",
+      "meaning": "导弹（放开火箭）",
+      "sentence": "The country conducted a test launch of its latest intercontinental missile.",
+      "translation": "该国试射了最新的洲际导弹。"
     },
     {
-      "word": "discriminate",
-      "meaning": "歧视(不好的判断)",
-      "sentence": "She felt discriminated against because of her disability.",
-      "translation": "她因为自己的残疾而感到被歧视。"
+      "word": "emission",
+      "meaning": "排放（放开阀门）",
+      "sentence": "The new regulations aim to reduce carbon emissions from factories.",
+      "translation": "新法规旨在减少工厂的碳排放。"
     }
   ]
 };

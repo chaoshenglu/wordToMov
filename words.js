@@ -2,34 +2,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "evoke",
-      "meaning": "唤起（向外喊）",
-      "sentence": "The smell of freshly baked bread evoked warm memories of her grandmother's kitchen.",
-      "translation": "新鲜出炉的面包香气唤起了她对祖母厨房的温暖回忆。"
+      "word": "reference",
+      "meaning": "参考",
+      "sentence": "Please include a reference to the source in your research paper.",
+      "translation": "请在研究论文中包含对来源的引用。"
     },
     {
-      "word": "invoke",
-      "meaning": "祈求（向内喊）",
-      "sentence": "He invoked the blessings of the gods before setting off on his journey.",
-      "translation": "他在出发前祈求神灵的保佑。"
+      "word": "referable",
+      "meaning": "可参考的",
+      "sentence": "The success of the project is referable to the team's hard work.",
+      "translation": "项目的成功可归因于团队的辛勤工作。"
     },
     {
-      "word": "provoke",
-      "meaning": "挑衅（向前喊）",
-      "sentence": "His sarcastic comment provoked an angry response from the audience.",
-      "translation": "他讽刺的评论引发了观众的愤怒反应。"
+      "word": "referral",
+      "meaning": "推荐",
+      "sentence": "She got the job through a referral from a friend.",
+      "translation": "她通过朋友的推荐得到了这份工作。"
     },
     {
-      "word": "revoke",
-      "meaning": "撤销（向回喊）",
-      "sentence": "The government decided to revoke the controversial policy after public protests.",
-      "translation": "在公众抗议后，政府决定撤销这项有争议的政策。"
+      "word": "referee",
+      "meaning": "裁判",
+      "sentence": "The referee blew the whistle to stop the game.",
+      "translation": "裁判吹哨停止了比赛。"
     },
     {
-      "word": "convoke",
-      "meaning": "召集（一起喊）",
-      "sentence": "The president convoked an emergency meeting to address the crisis.",
-      "translation": "总统召集了一次紧急会议以应对危机。"
+      "word": "preference",
+      "meaning": "偏好",
+      "sentence": "He has a preference for tea over coffee.",
+      "translation": "比起咖啡，他更喜欢茶。"
     }
   ]
 };

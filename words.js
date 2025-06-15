@@ -1,35 +1,34 @@
-// 单词数据
 const wordsData = {
   "words": [
     {
-      "word": "reference",
-      "meaning": "参考",
-      "sentence": "Please include a reference to the source in your research paper.",
-      "translation": "请在研究论文中包含对来源的引用。"
+      "word": "permissible",
+      "meaning": "可允许的（放开限制）",
+      "sentence": "The use of mobile phones is not permissible during the exam.",
+      "translation": "考试期间不允许使用手机。"
     },
     {
-      "word": "referable",
-      "meaning": "可参考的",
-      "sentence": "The success of the project is referable to the team's hard work.",
-      "translation": "项目的成功可归因于团队的辛勤工作。"
+      "word": "admissible",
+      "meaning": "可采纳的（放开约束）",
+      "sentence": "The judge ruled that the new evidence was admissible in court.",
+      "translation": "法官裁定新证据可以在法庭上被采纳。"
     },
     {
-      "word": "referral",
-      "meaning": "推荐",
-      "sentence": "She got the job through a referral from a friend.",
-      "translation": "她通过朋友的推荐得到了这份工作。"
+      "word": "dismiss",
+      "meaning": "解散（放开枷锁）",
+      "sentence": "The teacher had to dismiss the class early due to the power outage.",
+      "translation": "由于停电，老师不得不提前下课。"
     },
     {
-      "word": "referee",
-      "meaning": "裁判",
-      "sentence": "The referee blew the whistle to stop the game.",
-      "translation": "裁判吹哨停止了比赛。"
+      "word": "missile",
+      "meaning": "导弹（放开火箭）",
+      "sentence": "The country conducted a test launch of its latest intercontinental missile.",
+      "translation": "该国试射了最新的洲际导弹。"
     },
     {
-      "word": "preference",
-      "meaning": "偏好",
-      "sentence": "He has a preference for tea over coffee.",
-      "translation": "比起咖啡，他更喜欢茶。"
+      "word": "emission",
+      "meaning": "排放（放开阀门）",
+      "sentence": "The new regulations aim to reduce carbon emissions from factories.",
+      "translation": "新法规旨在减少工厂的碳排放。"
     }
   ]
 };

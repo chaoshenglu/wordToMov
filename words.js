@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "permissible",
-      "meaning": "可允许的（放开限制）",
-      "sentence": "The use of mobile phones is not permissible during the exam.",
-      "translation": "考试期间不允许使用手机。"
+      "word": "evoke",
+      "meaning": "唤起（向外喊）",
+      "sentence": "The smell of freshly baked bread evoked warm memories of her grandmother's kitchen.",
+      "translation": "新鲜出炉的面包香气唤起了她对祖母厨房的温暖回忆。"
     },
     {
-      "word": "admissible",
-      "meaning": "可采纳的（放开约束）",
-      "sentence": "The judge ruled that the new evidence was admissible in court.",
-      "translation": "法官裁定新证据可以在法庭上被采纳。"
+      "word": "invoke",
+      "meaning": "祈求（向内喊）",
+      "sentence": "He invoked the blessings of the gods before setting off on his journey.",
+      "translation": "他在出发前祈求神灵的保佑。"
     },
     {
-      "word": "dismiss",
-      "meaning": "解散（放开枷锁）",
-      "sentence": "The teacher had to dismiss the class early due to the power outage.",
-      "translation": "由于停电，老师不得不提前下课。"
+      "word": "provoke",
+      "meaning": "挑衅（向前喊）",
+      "sentence": "His sarcastic comment provoked an angry response from the audience.",
+      "translation": "他讽刺的评论引发了观众的愤怒反应。"
     },
     {
-      "word": "missile",
-      "meaning": "导弹（放开火箭）",
-      "sentence": "The country conducted a test launch of its latest intercontinental missile.",
-      "translation": "该国试射了最新的洲际导弹。"
+      "word": "revoke",
+      "meaning": "撤销（向回喊）",
+      "sentence": "The government decided to revoke the controversial policy after public protests.",
+      "translation": "在公众抗议后，政府决定撤销这项有争议的政策。"
     },
     {
-      "word": "emission",
-      "meaning": "排放（放开阀门）",
-      "sentence": "The new regulations aim to reduce carbon emissions from factories.",
-      "translation": "新法规旨在减少工厂的碳排放。"
+      "word": "convoke",
+      "meaning": "召集（一起喊）",
+      "sentence": "The president convoked an emergency meeting to address the crisis.",
+      "translation": "总统召集了一次紧急会议以应对危机。"
     }
   ]
 };

@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "affect",
-      "meaning": "影响(v.造成影响)",
-      "sentence": "Lack of sleep can negatively affect your concentration.",
-      "translation": "睡眠不足会对你的注意力产生负面影响。"
+      "word": "major",
+      "meaning": "主要的（a.较大的）",
+      "sentence": "The major reason for his success was his hard work and dedication.",
+      "translation": "他成功的主要原因是他的努力和奉献精神。"
     },
     {
-      "word": "effect",
-      "meaning": "效果(n.产生的影响)",
-      "sentence": "The new law had a significant effect on reducing pollution.",
-      "translation": "这项新法律对减少污染产生了显著效果。"
+      "word": "majority",
+      "meaning": "大多数（n.大部分）",
+      "sentence": "The majority of the students voted in favor of the new school policy.",
+      "translation": "大多数学生投票支持了新的学校政策。"
     },
     {
-      "word": "perfect",
-      "meaning": "完美（n./v.彻底影响）",
-      "sentence": "She practiced for months to perfect her piano performance.",
-      "translation": "她练习了数月，以使自己的钢琴演奏趋于完美。"
+      "word": "majestic",
+      "meaning": "雄伟的（a.大而雄伟）",
+      "sentence": "The majestic mountains stood tall against the blue sky.",
+      "translation": "雄伟的山峰在蓝天的映衬下巍然耸立。"
     },
     {
-      "word": "infect",
-      "meaning": "传染（v.不良影响）",
-      "sentence": "The virus can infect people through close contact.",
-      "translation": "这种病毒可通过密切接触传染给人类。"
+      "word": "magnify",
+      "meaning": "放大（v.扩大）",
+      "sentence": "Scientists use microscopes to magnify tiny organisms for study.",
+      "translation": "科学家使用显微镜放大微小生物以便研究。"
     },
     {
-      "word": "disinfect",
-      "meaning": "消毒（v.避免不良影响）",
-      "sentence": "Hospitals use special chemicals to disinfect surgical tools.",
-      "translation": "医院使用特殊化学剂对外科工具进行消毒。"
+      "word": "magnificent",
+      "meaning": "壮丽的（a.大而宏伟）",
+      "sentence": "The palace was a magnificent sight with its golden domes and marble halls.",
+      "translation": "这座宫殿金碧辉煌，圆顶和大理石厅堂显得格外宏伟。"
     }
   ]
 };

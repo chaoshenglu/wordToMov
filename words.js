@@ -14,7 +14,7 @@ const wordsData = {
     },
     {
       "word": "perfect",
-      "meaning": "完美（n.彻底的影响）",
+      "meaning": "完美（n./v.彻底影响）",
       "sentence": "She practiced for months to perfect her piano performance.",
       "translation": "她练习了数月，以使自己的钢琴演奏趋于完美。"
     },

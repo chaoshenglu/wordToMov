@@ -14,7 +14,7 @@ const wordsData = {
     },
     {
       "word": "deviation",
-      "meaning": "偏离(n.离开正路)",
+      "meaning": "违背(n.离开正路)",
       "sentence": "A slight deviation in temperature could affect the experiment results.",
       "translation": "温度的轻微偏差可能会影响实验结果。"
     },

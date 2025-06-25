@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "major",
-      "meaning": "主要的（a.较大的）",
-      "sentence": "The major reason for his success was his hard work and dedication.",
-      "translation": "他成功的主要原因是他的努力和奉献精神。"
+      "word": "viable",
+      "meaning": "可行的(a.可走路的)",
+      "sentence": "Solar energy is a viable alternative to fossil fuels in sunny regions.",
+      "translation": "在阳光充足的地区，太阳能是化石燃料的可行替代品。"
     },
     {
-      "word": "majority",
-      "meaning": "大多数（n.大部分）",
-      "sentence": "The majority of the students voted in favor of the new school policy.",
-      "translation": "大多数学生投票支持了新的学校政策。"
+      "word": "deviate",
+      "meaning": "偏离(v.离开正路)",
+      "sentence": "The project must not deviate from the original plan without approval.",
+      "translation": "未经批准，该项目不得偏离原计划。"
     },
     {
-      "word": "majestic",
-      "meaning": "雄伟的（a.大而雄伟）",
-      "sentence": "The majestic mountains stood tall against the blue sky.",
-      "translation": "雄伟的山峰在蓝天的映衬下巍然耸立。"
+      "word": "deviation",
+      "meaning": "偏离(n.离开正路)",
+      "sentence": "A slight deviation in temperature could affect the experiment results.",
+      "translation": "温度的轻微偏差可能会影响实验结果。"
     },
     {
-      "word": "magnify",
-      "meaning": "放大（v.扩大）",
-      "sentence": "Scientists use microscopes to magnify tiny organisms for study.",
-      "translation": "科学家使用显微镜放大微小生物以便研究。"
+      "word": "obviate",
+      "meaning": "避免(n.挡住道路)",
+      "sentence": "Early planning can obviate the need for last-minute changes.",
+      "translation": "提前规划可以避免最后一刻的改动。"
     },
     {
-      "word": "magnificent",
-      "meaning": "壮丽的（a.大而宏伟）",
-      "sentence": "The palace was a magnificent sight with its golden domes and marble halls.",
-      "translation": "这座宫殿金碧辉煌，圆顶和大理石厅堂显得格外宏伟。"
+      "word": "trivial",
+      "meaning": "琐碎的(a.三岔路的)",
+      "sentence": "Don't waste time on trivial details; focus on the main goal.",
+      "translation": "不要把时间浪费在琐碎的细节上，专注于主要目标。"
     }
   ]
 };

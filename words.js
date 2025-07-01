@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "major",
-      "meaning": "主要的（a.较大的）",
-      "sentence": "The major reason for his success was his hard work and dedication.",
-      "translation": "他成功的主要原因是他的努力和奉献精神。"
+      "word": "cordial",
+      "meaning": "热忱的（发自内心的）",
+      "sentence": "The host gave us a cordial greeting and offered us some tea.",
+      "translation": "主人热情地迎接我们，并给我们端上了茶。"
     },
     {
-      "word": "majority",
-      "meaning": "大多数（n.大部分）",
-      "sentence": "The majority of the students voted in favor of the new school policy.",
-      "translation": "大多数学生投票支持了新的学校政策。"
+      "word": "concord",
+      "meaning": "和睦（同心）",
+      "sentence": "The two countries maintained a state of concord for decades.",
+      "translation": "这两个国家几十年来一直保持和谐关系。"
     },
     {
-      "word": "majestic",
-      "meaning": "雄伟的（a.大而雄伟）",
-      "sentence": "The majestic mountains stood tall against the blue sky.",
-      "translation": "雄伟的山峰在蓝天的映衬下巍然耸立。"
+      "word": "discord",
+      "meaning": "冲突（异心）",
+      "sentence": "Their constant discord made it difficult to work together.",
+      "translation": "他们持续不断的冲突使得合作变得困难。"
     },
     {
-      "word": "magnify",
-      "meaning": "放大（v.扩大）",
-      "sentence": "Scientists use microscopes to magnify tiny organisms for study.",
-      "translation": "科学家使用显微镜放大微小生物以便研究。"
+      "word": "record",
+      "meaning": "记录（记在心里）",
+      "sentence": "She set a new world record in the 100-meter dash.",
+      "translation": "她创造了100米短跑的新世界纪录。"
     },
     {
-      "word": "magnificent",
-      "meaning": "壮丽的（a.大而宏伟）",
-      "sentence": "The palace was a magnificent sight with its golden domes and marble halls.",
-      "translation": "这座宫殿金碧辉煌，圆顶和大理石厅堂显得格外宏伟。"
+      "word": "accord",
+      "meaning": "一致（心意一致）",
+      "sentence": "The peace accord was signed after months of negotiation.",
+      "translation": "经过数月的谈判，和平协议终于签署。"
     }
   ]
 };

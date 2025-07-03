@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "cordial",
-      "meaning": "热忱的（发自内心的）",
-      "sentence": "The host gave us a cordial greeting and offered us some tea.",
-      "translation": "主人热情地迎接我们，并给我们端上了茶。"
+      "word": "transport",
+      "meaning": "运输（携带）",
+      "sentence": "The company uses trucks to transport goods across the country.",
+      "translation": "该公司使用卡车在全国范围内运输货物。"
     },
     {
-      "word": "concord",
-      "meaning": "和睦（同心）",
-      "sentence": "The two countries maintained a state of concord for decades.",
-      "translation": "这两个国家几十年来一直保持和谐关系。"
+      "word": "import",
+      "meaning": "进口（带进）",
+      "sentence": "The country needs to import more food due to poor harvests.",
+      "translation": "由于收成不佳，该国需要进口更多的粮食。"
     },
     {
-      "word": "discord",
-      "meaning": "冲突（异心）",
-      "sentence": "Their constant discord made it difficult to work together.",
-      "translation": "他们持续不断的冲突使得合作变得困难。"
+      "word": "export",
+      "meaning": "出口（带出）",
+      "sentence": "Germany continues to export cars to markets around the world.",
+      "translation": "德国持续向世界各地市场出口汽车。"
     },
     {
-      "word": "record",
-      "meaning": "记录（记在心里）",
-      "sentence": "She set a new world record in the 100-meter dash.",
-      "translation": "她创造了100米短跑的新世界纪录。"
+      "word": "portable",
+      "meaning": "便携的（可携带的）",
+      "sentence": "A portable device is designed to be easily carried or moved.",
+      "translation": "便携式设备设计为便于携带或移动。"
     },
     {
-      "word": "accord",
-      "meaning": "一致（心意一致）",
-      "sentence": "The peace accord was signed after months of negotiation.",
-      "translation": "经过数月的谈判，和平协议终于签署。"
+      "word": "support",
+      "meaning": "支持（带你飞）",
+      "sentence": "They have the support of most of the country.",
+      "translation": "他们有大多数国民的支持。"
     }
   ]
 };

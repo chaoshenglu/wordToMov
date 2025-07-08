@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "transport",
-      "meaning": "运输（携带）",
-      "sentence": "The company uses trucks to transport goods across the country.",
-      "translation": "该公司使用卡车在全国范围内运输货物。"
+      "word": "dine in",
+      "meaning": "在家用餐",
+      "sentence": "We decided to dine in and cook instead of going out.",
+      "translation": "我们决定在家做饭，不出去吃。"
     },
     {
-      "word": "import",
-      "meaning": "进口（带进）",
-      "sentence": "The country needs to import more food due to poor harvests.",
-      "translation": "由于收成不佳，该国需要进口更多的粮食。"
+      "word": "dine out",
+      "meaning": "外出用餐",
+      "sentence": "To celebrate her promotion, we're going to dine out.",
+      "translation": "为了庆祝她升职，我们准备外出就餐。"
     },
     {
-      "word": "export",
-      "meaning": "出口（带出）",
-      "sentence": "Germany continues to export cars to markets around the world.",
-      "translation": "德国持续向世界各地市场出口汽车。"
+      "word": "dining table",
+      "meaning": "餐桌",
+      "sentence": "The antique oak dining table has been in our family for three generations.",
+      "translation": "这张古董橡木餐桌在我们家已经传了三代了。"
     },
     {
-      "word": "portable",
-      "meaning": "便携的（可携带的）",
-      "sentence": "A portable device is designed to be easily carried or moved.",
-      "translation": "便携式设备设计为便于携带或移动。"
+      "word": "dining car",
+      "meaning": "餐车",
+      "sentence": "Let's go to the dining car for lunch.",
+      "translation": "我们去餐车吃午饭吧。"
     },
     {
-      "word": "support",
-      "meaning": "支持（带你飞）",
-      "sentence": "They have the support of most of the country.",
-      "translation": "他们有大多数国民的支持。"
+      "word": "dining room",
+      "meaning": "餐厅",
+      "sentence": "The family gathers in the dining room every evening.",
+      "translation": "全家人每晚在餐厅聚餐。"
     }
   ]
 };

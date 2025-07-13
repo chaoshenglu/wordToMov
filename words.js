@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "dine in",
-      "meaning": "在家用餐",
-      "sentence": "We decided to dine in and cook instead of going out.",
-      "translation": "我们决定在家做饭，不出去吃。"
+      "word": "miscreant",
+      "meaning": "恶棍（坏人）",
+      "sentence": "The police finally apprehended the miscreant who had been vandalizing the neighborhood.",
+      "translation": "警方最终逮捕了那个一直在社区搞破坏的歹徒。"
     },
     {
-      "word": "dine out",
-      "meaning": "外出用餐",
-      "sentence": "To celebrate her promotion, we're going to dine out.",
-      "translation": "为了庆祝她升职，我们准备外出就餐。"
+      "word": "misdeed",
+      "meaning": "恶行（坏事）",
+      "sentence": "He deeply regretted his misdeed and vowed to make amends.",
+      "translation": "他对自己犯下的恶行深感懊悔，并决心弥补过错。"
     },
     {
-      "word": "dining table",
-      "meaning": "餐桌",
-      "sentence": "The antique oak dining table has been in our family for three generations.",
-      "translation": "这张古董橡木餐桌在我们家已经传了三代了。"
+      "word": "misconception",
+      "meaning": "错误观念（坏观念）",
+      "sentence": "There is a common misconception that all snakes are venomous.",
+      "translation": "人们普遍误解所有蛇都是有毒的。"
     },
     {
-      "word": "dining car",
-      "meaning": "餐车",
-      "sentence": "Let's go to the dining car for lunch.",
-      "translation": "我们去餐车吃午饭吧。"
+      "word": "misfortune",
+      "meaning": "厄运（坏运气）",
+      "sentence": "Losing his job was a great misfortune, but he remained optimistic.",
+      "translation": "失业对他来说是个巨大的不幸，但他依然保持乐观。"
     },
     {
-      "word": "dining room",
-      "meaning": "餐厅",
-      "sentence": "The family gathers in the dining room every evening.",
-      "translation": "全家人每晚在餐厅聚餐。"
+      "word": "mischief",
+      "meaning": "恶作剧（坏孩子）",
+      "sentence": "The children were up to some mischief, hiding their teacher's chalk before class.",
+      "translation": "孩子们在上课前藏起了老师的粉笔，准备恶作剧。"
     }
   ]
 };

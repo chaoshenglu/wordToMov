@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "miscreant",
-      "meaning": "恶棍（坏人）",
-      "sentence": "The police finally apprehended the miscreant who had been vandalizing the neighborhood.",
-      "translation": "警方最终逮捕了那个一直在社区搞破坏的歹徒。"
+      "word": "affirm",
+      "meaning": "断言",
+      "sentence": "The witness affirmed under oath that he saw the defendant at the scene.",
+      "translation": "证人在宣誓后确认，他在现场看到了被告。"
     },
     {
-      "word": "misdeed",
-      "meaning": "恶行（坏事）",
-      "sentence": "He deeply regretted his misdeed and vowed to make amends.",
-      "translation": "他对自己犯下的恶行深感懊悔，并决心弥补过错。"
+      "word": "confirm",
+      "meaning": "确认",
+      "sentence": "The lab results confirmed that the patient had a bacterial infection.",
+      "translation": "实验室结果证实，患者患有细菌感染。"
     },
     {
-      "word": "misconception",
-      "meaning": "错误观念（坏观念）",
-      "sentence": "There is a common misconception that all snakes are venomous.",
-      "translation": "人们普遍误解所有蛇都是有毒的。"
+      "word": "confirmation",
+      "meaning": "批准",
+      "sentence": "We are still waiting for official confirmation of the meeting schedule.",
+      "translation": "我们仍在等待会议日程的正式确认。"
     },
     {
-      "word": "misfortune",
-      "meaning": "厄运（坏运气）",
-      "sentence": "Losing his job was a great misfortune, but he remained optimistic.",
-      "translation": "失业对他来说是个巨大的不幸，但他依然保持乐观。"
+      "word": "infirm",
+      "meaning": "虚弱的",
+      "sentence": "The infirm old man needed assistance to walk.",
+      "translation": "那位体弱的老人需要搀扶才能行走。"
     },
     {
-      "word": "mischief",
-      "meaning": "恶作剧（坏孩子）",
-      "sentence": "The children were up to some mischief, hiding their teacher's chalk before class.",
-      "translation": "孩子们在上课前藏起了老师的粉笔，准备恶作剧。"
+      "word": "reaffirm",
+      "meaning": "重申",
+      "sentence": "The CEO reaffirmed the company's commitment to environmental sustainability.",
+      "translation": "首席执行官重申了公司对环保可持续性的承诺。"
     }
   ]
 };

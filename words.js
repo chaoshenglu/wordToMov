@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "affirm",
-      "meaning": "断言",
-      "sentence": "The witness affirmed under oath that he saw the defendant at the scene.",
-      "translation": "证人在宣誓后确认，他在现场看到了被告。"
+      "word": "factory",
+      "meaning": "工厂(制作东西的地方)",
+      "sentence": "The new car factory will provide jobs for over 1,000 workers in the area.",
+      "translation": "这家新汽车工厂将为该地区1000多名工人提供就业机会。"
     },
     {
-      "word": "confirm",
-      "meaning": "确认",
-      "sentence": "The lab results confirmed that the patient had a bacterial infection.",
-      "translation": "实验室结果证实，患者患有细菌感染。"
+      "word": "factual",
+      "meaning": "事实的(已制作完成的)",
+      "sentence": "The journalist insisted that her report was completely factual and unbiased.",
+      "translation": "这位记者坚称她的报道完全基于事实且无偏见。"
     },
     {
-      "word": "confirmation",
-      "meaning": "批准",
-      "sentence": "We are still waiting for official confirmation of the meeting schedule.",
-      "translation": "我们仍在等待会议日程的正式确认。"
+      "word": "factor",
+      "meaning": "因素(制作东西的要素)",
+      "sentence": "Time management is a critical factor in achieving success in any project.",
+      "translation": "时间管理是任何项目取得成功的关键因素。"
     },
     {
-      "word": "infirm",
-      "meaning": "虚弱的",
-      "sentence": "The infirm old man needed assistance to walk.",
-      "translation": "那位体弱的老人需要搀扶才能行走。"
+      "word": "manufacture",
+      "meaning": "制造(生产制作)",
+      "sentence": "This company specializes in the manufacture of high-precision medical devices.",
+      "translation": "这家公司专门制造高精度的医疗设备。"
     },
     {
-      "word": "reaffirm",
-      "meaning": "重申",
-      "sentence": "The CEO reaffirmed the company's commitment to environmental sustainability.",
-      "translation": "首席执行官重申了公司对环保可持续性的承诺。"
+      "word": "artifact",
+      "meaning": "人工制品(人工制作的)",
+      "sentence": "The museum displayed ancient artifacts from the Mayan civilization.",
+      "translation": "博物馆展出了来自玛雅文明的古代文物。"
     }
   ]
 };

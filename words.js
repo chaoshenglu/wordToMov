@@ -29,6 +29,6 @@ const wordsData = {
       "meaning": "行人",
       "sentence": "The pedestrian waited patiently for the traffic light to turn green before crossing the street.",
       "translation": "行人耐心等待交通灯变绿后才过马路。"
-    },
+    }
   ]
 };

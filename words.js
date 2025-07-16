@@ -1,34 +1,34 @@
 const wordsData = {
   "words": [
     {
-      "word": "factory",
-      "meaning": "工厂(制作东西的地方)",
-      "sentence": "The new car factory will provide jobs for over 1,000 workers in the area.",
-      "translation": "这家新汽车工厂将为该地区1000多名工人提供就业机会。"
+      "word": "magician",
+      "meaning": "魔术师",
+      "sentence": "The magician pulled a rabbit out of his hat, astonishing the audience.",
+      "translation": "魔术师从帽子里变出一只兔子，让观众惊叹不已。"
     },
     {
-      "word": "factual",
-      "meaning": "事实的(已制作完成的)",
-      "sentence": "The journalist insisted that her report was completely factual and unbiased.",
-      "translation": "这位记者坚称她的报道完全基于事实且无偏见。"
+      "word": "pedestrian",
+      "meaning": "行人",
+      "sentence": "The pedestrian waited patiently for the traffic light to turn green before crossing the street.",
+      "translation": "行人耐心等待交通灯变绿后才过马路。"
     },
     {
-      "word": "factor",
-      "meaning": "因素(制作东西的要素)",
-      "sentence": "Time management is a critical factor in achieving success in any project.",
-      "translation": "时间管理是任何项目取得成功的关键因素。"
+      "word": "musician",
+      "meaning": "音乐家",
+      "sentence": "The talented musician composed a beautiful symphony that moved everyone to tears.",
+      "translation": "这位才华横溢的音乐家创作了一首动人的交响乐，让所有人热泪盈眶。"
     },
     {
-      "word": "manufacture",
-      "meaning": "制造(生产制作)",
-      "sentence": "This company specializes in the manufacture of high-precision medical devices.",
-      "translation": "这家公司专门制造高精度的医疗设备。"
+      "word": "physician",
+      "meaning": "医师",
+      "sentence": "The physician carefully examined the patient and prescribed the appropriate medication.",
+      "translation": "医生仔细检查了病人，并开了合适的药方。"
     },
     {
-      "word": "artifact",
-      "meaning": "人工制品(人工制作的)",
-      "sentence": "The museum displayed ancient artifacts from the Mayan civilization.",
-      "translation": "博物馆展出了来自玛雅文明的古代文物。"
+      "word": "technician",
+      "meaning": "技术员",
+      "sentence": "The lab technician calibrated the equipment to ensure accurate test results.",
+      "translation": "实验室技术员校准设备以确保测试结果的准确性。"
     }
   ]
 };
